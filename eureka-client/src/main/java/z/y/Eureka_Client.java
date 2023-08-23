@@ -25,7 +25,7 @@ public class Eureka_Client {
     }
 
     @GetMapping("/hello")
-    public void hello() {
+    public String hello() {
         // 所有已知的服务ID
         List<String> services = client.getServices();
         for (String service : services) {
@@ -35,6 +35,8 @@ public class Eureka_Client {
                 System.out.println("host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
             }
         }
+
+        return "666";
     }
 
 }
