@@ -15,6 +15,7 @@
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>hystrix-client</module>
+        <module>hystrix-dashborad</module>
     </modules>
 
     <!--设置属性-->

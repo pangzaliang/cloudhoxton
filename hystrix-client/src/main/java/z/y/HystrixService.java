@@ -40,7 +40,7 @@ public class HystrixService {
      */
     @CacheResult
     // 定义降级方法 遇到某个异常不降级
-    @HystrixCommand(fallbackMethod = "helloFallBack", ignoreExceptions = FileNotFoundException.class)
+    @HystrixCommand(ignoreExceptions = FileNotFoundException.class)
     public Future<String> hello (boolean ss) {
         return new AsyncResult<String>() {
             @Override
